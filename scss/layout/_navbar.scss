@@ -1,0 +1,31 @@
+/* --------- Nav --------- */
+
+#NavBar {
+    grid-area: nav;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: $hoverMenuColor;
+    }
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+#logo {
+    @include sizes(12rem, 12rem);
+}
+
+#brandName {
+    font-size: 2.5rem;
+    color: $negro;
+}
+
+.dropdown-item:active {
+    background-color: $bkgActiveMenu;
+}
+
+.dropdown-menu {
+    font-size: 1.5rem;
+}

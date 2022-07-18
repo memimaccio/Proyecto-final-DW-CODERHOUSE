@@ -1,0 +1,191 @@
+/* --------- Media queries --------- */
+
+$breakpoints:(tablet: 650px,
+    desktop: 900px);
+
+
+@media(min-width:map-get($breakpoints, tablet)) {
+
+    #wrapper {
+        min-height: 100vh;
+    }
+
+    .navbar-brand {
+        margin-left: 50px;
+    }
+
+    #Grid_SecIndex {
+        grid-template-areas:
+            "Carousel Carousel"
+            "Redes Redes"
+            "Macarons MiniCakes"
+            "Local Local";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #IndexArt_Macarons {
+        padding-right: 3px;
+    }
+
+    #IndexArt_MiniCakes {
+        padding-left: 3px;
+    }
+
+    .Producto {
+        width: 48%;
+        text-align: center;
+    }
+
+    .Producto__image {
+        border-radius: 10px;
+        border: 1px solid rgb(196, 194, 194);
+
+        &:hover {
+            -webkit-transform: scale(1.01) rotate(0.01deg);
+            transform: scale(1.01) rotate(0.01deg);
+            transition-duration: 0.5s;
+            border: 1px solid black;
+        }
+    }
+
+    .img__medium {
+        @include sizes(90%, 350px);
+        border: $bordeProductos;
+    }
+
+    .Seccion__otros {
+        text-align: center;
+    }
+
+    .Contacto_Section {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    input,
+    textarea {
+        border-radius: 3px;
+        width: 80%;
+    }
+
+    .btn {
+        margin: 5px 0px;
+        padding: 5px 10px;
+        width: 30%;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width:map-get($breakpoints, desktop)) {
+    body {
+        background-image: url('../assets/img/Fondo.jpg');
+        background-repeat: repeat;
+    }
+
+    #wrapper {
+        max-width: 1024px;
+        margin: auto;
+        background-color: white;
+        display: grid;
+        grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+    }
+
+    #logo {
+        @include sizes(15rem, 15rem);
+    }
+
+    #brandName {
+        font-size: 3rem;
+    }
+
+    .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .Subtitulo__secciones {
+        font-size: 2rem;
+    }
+
+    .img_grande {
+        height: 100%;
+    }
+
+    .Index_TextoRedes {
+        display: grid;
+        align-content: center;
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+
+    .Index_TextoRedes_subt {
+        font-size: 2rem;
+    }
+
+    .Producto {
+        width: 32%;
+        text-align: center;
+    }
+
+    .iframe__ubicacion {
+        display: flex;
+        @include sizes(50%, 300px);
+        border: $bordeProductos;
+    }
+
+    .Local_Art_Contacto {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Seccion__otros {
+        margin-bottom: 10px;
+    }
+
+    .img__medium {
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+    }
+
+    .Contacto_Section {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .text {
+        font-size: 2rem;
+    }
+
+    footer {
+        grid-template-areas:
+            "fNav fContacto fRedes"
+            "fCopyright fCopyright fCopyright";
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        justify-content: center;
+        font-size: 1.5rem;
+
+    }
+
+    #footer_copyright {
+        grid-area: fCopyright;
+        justify-self: center;
+        margin-top: 25px;
+    }
+
+    #footer_contacto {
+        border: none;
+    }
+
+}

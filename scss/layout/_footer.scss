@@ -1,0 +1,53 @@
+/* --------- Footer --------- */
+
+footer {
+    display: grid;
+    grid-template-areas:
+    "fNav"
+    "fContacto"
+    "fRedes"
+    "fCopyright";
+    background-color: $footBkg;
+    color: $blanco;
+    padding-top: 10px;
+    justify-content: center;
+    font-size: 1.3rem;
+    bottom: 0;
+    a{
+        color: $blanco;
+    }
+}
+
+#footer_nav,
+#footer_contacto,
+#footer_redes {
+    justify-self: center;
+}
+
+#footer_nav {
+    grid-area: fNav;
+    line-height: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#footer_contacto {
+    grid-area: fContacto;
+    line-height: 25px;
+    text-align: center;
+    border-top: $bordeblanco;
+    border-bottom: $bordeblanco;
+    padding: 10px 0;
+}
+
+#footer_redes {
+    grid-area: fRedes;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+#footer_copyright {
+    grid-area: fCopyright;
+    margin-top: 25px;
+}

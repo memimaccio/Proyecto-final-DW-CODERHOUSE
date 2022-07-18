@@ -1,0 +1,11 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "general";
+@import "./layout/navbar";
+@import "./layout/mainGeneral";
+@import "./layout/mainIndex";
+@import "./layout/mainProductos";
+@import "./layout/mainContacto";
+@import "./layout/footer";
+@import "responsive";

@@ -1,0 +1,44 @@
+/* --------- General --------- */
+
+html {
+    font-size: 62.5%;
+}
+
+#wrapper {
+    min-height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+}
+
+a {
+    text-decoration: none;
+    color: $negro;
+}
+
+li {
+    list-style-type: none;
+}
+
+.img_grande {
+    @include sizes(100%, 300px);
+    border-radius: 2px;
+}
+
+.texto--centrado {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.redes_iconoGrande {
+    @include sizes(2.2rem, 2.2rem);
+}
+
+.redes_iconoChico {
+    @include sizes(1.5rem, 1.5rem);
+    margin-right: 5px;
+}

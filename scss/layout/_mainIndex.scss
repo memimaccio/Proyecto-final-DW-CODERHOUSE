@@ -1,0 +1,82 @@
+/* --------- Main Index --------- */
+
+main {
+    border-top: $bordeNegro;
+    margin-top: 3px;
+    grid-area: main;
+}
+
+#Grid_SecIndex {
+    display: grid;
+    grid-template-areas:
+        "Carousel"
+        "Redes"
+        "Macarons"
+        "MiniCakes"
+        ;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+#Carousel {
+    padding-top: 10px;
+    grid-area: Carousel;
+}
+
+.carousel{
+    margin-bottom: 5px;
+}
+
+.Index_TextoRedes {
+    grid-area: Redes;
+    background-color: $bkgTextoIndex;
+    display: flex;
+    justify-content: center;
+    @extend .carousel;
+}
+
+.Index_TextoRedes_subt {
+    margin: 0;
+}
+
+#IndexArt_Macarons {
+    grid-area: Macarons;
+    @extend .carousel;
+}
+
+#IndexArt_MiniCakes {
+    grid-area: MiniCakes;
+    @extend .carousel;
+}
+
+.Cont_img_anim {
+    opacity: 1;
+    transition: .5s ease;
+    position: relative;
+    &:hover .image{
+        opacity: 0.3;
+    }
+    &:hover .middle{
+        opacity: 1;
+    }
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text {
+    background-color: $bkgTextoIndex;
+    color: $negro;
+    font-size: 1.5rem;
+    padding: 16px 32px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
